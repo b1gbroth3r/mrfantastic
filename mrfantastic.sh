@@ -1,14 +1,5 @@
 #!/bin/bash
 
-echo "deb http://deb.debian.org/debian bullseye main" | tee -a /etc/apt/sources.list
-echo "deb-src http://deb.debian.org/debian bullseye main" | tee -a /etc/apt/sources.list
-
-echo "deb http://deb.debian.org/debian-security/ bullseye-security main" | tee -a /etc/apt/sources.list
-echo "deb-src http://deb.debian.org/debian-security/ bullseye-security main" | tee -a /etc/apt/sources.list
-
-echo "deb http://deb.debian.org/debian bullseye-updates main" | tee -a /etc/apt/sources.list
-echo "deb-src http://deb.debian.org/debian bullseye-updates main" | tee -a /etc/apt/sources.list
-
 apt update && apt install -y wget
 
 wget -qO - https://artifacts.elastic.co/GPG-KEY-elasticsearch | apt-key add -
