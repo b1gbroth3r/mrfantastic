@@ -26,5 +26,9 @@ cp ~/oracle/* /etc/elasticsearch/certs/
 cp ~/ca/* /etc/kibana/config/certs/
 cp ~/oracle/* /etc/kibana/config/certs/
 
+service elasticsearch start
+service kibana start
+service logstash start
+
 /usr/share/elasticsearch/bin/elasticsearch-setup-passwords auto | tee ~/creds.txt
 /usr/share/kibana/bin/kibana-encryption-keys generate | tee ~/encryption_keys.txt
