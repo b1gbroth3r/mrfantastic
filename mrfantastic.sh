@@ -31,7 +31,7 @@ wget "https://gist.githubusercontent.com/b1gbroth3r/d31d6df7c47174061043a5f4bc28
 unzip certs.zip
 
 cp ~/ca/* /etc/elasticsearch/certs/
-cp ~/oracle/* /etc/elasticsearch/certs/*
+cp ~/oracle/* /etc/elasticsearch/certs/
 cp ~/ca/* /etc/kibana/config/certs/
 cp ~/oracle/* /etc/kibana/config/certs/
 
