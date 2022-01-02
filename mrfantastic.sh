@@ -30,5 +30,7 @@ service elasticsearch start
 service kibana start
 service logstash start
 
-/usr/share/elasticsearch/bin/elasticsearch-setup-passwords auto | tee ~/creds.txt
+/usr/share/elasticsearch/bin/elasticsearch-setup-passwords auto -u "https://oracle:9200" | tee ~/creds.txt
 /usr/share/kibana/bin/kibana-encryption-keys generate | tee ~/encryption_keys.txt
+
+
